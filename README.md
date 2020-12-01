@@ -39,6 +39,9 @@ Create an application that can be used to write, save, and delete notes. This ap
 - NPM I Express
 - NPM I UUID
 
+* Run node server.js to retrieve the PORT successfully. Then open a web browser of your choice and type localhost:{PORT}.
+* Run nodemon in your terminal will also help while installing and running the above NPMs.
+
 ---
 
 ## USAGE
@@ -55,7 +58,7 @@ n/a
 
 ## TEST
 
-n/a
+No test were required for the Note Taker assignment.
 
 ---
 
@@ -77,6 +80,18 @@ n/a
 ![NOTES PAGE](./public/assets/images/note_taker2.png)
 
 ---
+
+## CONFLICTS
+
+I encountered multiple errors while trying to deploy to Heroku. One of which was missing the root (route) in my html routes file.
+
+```
+router.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+});
+```
+I was also missing the node_module in my gitignore file. (See below image for example)
+![ERROR](./public/assets/images/e_message.png)
 
 ## QUESTIONS
 
